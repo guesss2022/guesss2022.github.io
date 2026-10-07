@@ -9,7 +9,7 @@ main:
   - title: "Fast Multi-Body Coupling for Underwater Interactions"
     authors: "<strong>Tianhong Gao</strong>, Xuwen Chen, Xingqiao Li, Wei Li, Baoquan Chen, Zherong Pan, Kui Wu, Mengyu Chu<sup>†</sup>"
     journal: "Pacific Graphics 2025"
-    link: https://doi.org/10.2312/pg.20251268
+    link: /fast-multi-body-coupling.html
     bibtex: https://xw-c.github.io/publication/pg2025/cite.bib
     citation: |
       @inproceedings{10.2312:pg.20251268,
