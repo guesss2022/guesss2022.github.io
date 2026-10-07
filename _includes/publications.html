@@ -1,0 +1,140 @@
+<div class="publications">
+
+  {% if site.enable_publication_thumbnails %}
+  <ol class="bibliography">
+  {% else %}
+  <ol class="bibliography" style="list-style: decimal; padding: revert;">
+  {% endif %}
+
+    {% for pub in site.data.publications.main %}
+
+    <li>
+      <div class="pub-row">
+        {% if site.enable_publication_thumbnails %}
+        <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+          {% if pub.image %}
+          <img src="{{ pub.image }}" class="teaser img-fluid z-depth-1">
+          {% if pub.journal_short %}
+          <abbr class="badge">{{ pub.journal_short }}</abbr>
+          {% endif %}
+          {% else %}
+          <div class="teaser" style="box-shadow: none;">
+            {% if pub.journal_short %}
+            <abbr class="badge" style="margin-top: 10%;">{{ pub.journal_short }}</abbr>
+            {% endif %}
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+        <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+          {% if pub.link %}
+          <div class="title"><a href="{{ pub.link }}">{{ pub.title }}</a></div>
+          {% else %}
+          <div class="title">{{ pub.title }}</div>
+          {% endif %}
+          <div class="author">{{ pub.authors }}</div>
+          <div class="periodical">
+            <em>{{ pub.journal }}</em>
+            {% if pub.year %}
+            ({{ pub.year }})
+            {% endif %}
+          </div>
+          <div class="links">
+            {% if pub.pdf %}
+            <a href="{{ pub.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
+              style="font-size:12px;">PDF</a>
+            {% endif %}
+            {% if pub.arxiv %}
+            <a href="{{ pub.arxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
+              style="font-size:12px;">arXiv</a>
+            {% endif %}
+            {% if pub.bibtex %}
+            <a href="{{ pub.bibtex }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
+              {% if pub.citation %}data-citation-dialog="citation-{{ forloop.index }}" aria-haspopup="dialog"{% endif %}
+              style="font-size:12px;">Cite</a>
+            {% endif %}
+            {% if pub.doi %}
+            <a href="{{ pub.doi }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
+              style="font-size:12px;">DOI</a>
+            {% endif %}
+            {% if pub.video %}
+            <a href="{{ pub.video }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
+              style="font-size:12px;">Video</a>
+            {% endif %}
+            {% if pub.page %}
+            <a href="{{ pub.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
+              style="font-size:12px;">Project Page</a>
+            {% endif %}
+            {% if pub.code %}
+            <a href="{{ pub.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
+              style="font-size:12px;">Code</a>
+            {% endif %}
+            {% if pub.demo %}
+            <a href="{{ pub.demo }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
+              style="font-size:12px;">Demo</a>
+            {% endif %}
+            {% if pub.notes %}
+            <strong> <i style="color:#e74d3c">{{ pub.notes }}</i></strong>
+            {% endif %}
+            {% if pub.others %}
+            {{ pub.others }}
+            {% endif %}
+            {% if pub.code_note %}
+            <span class="publication-code-note">{{ pub.code_note }}</span>
+            {% endif %}
+          </div>
+          {% if pub.citation %}
+          <dialog id="citation-{{ forloop.index }}" class="citation-dialog"
+            aria-labelledby="citation-title-{{ forloop.index }}">
+            <div class="citation-dialog-header">
+              <strong id="citation-title-{{ forloop.index }}">BibTeX citation</strong>
+              <button type="button" class="citation-close" aria-label="Close citation">&times;</button>
+            </div>
+            <pre><code>{{ pub.citation | escape }}</code></pre>
+            <div class="citation-dialog-actions">
+              <span class="citation-copy-status" role="status" aria-live="polite"></span>
+              <button type="button" class="citation-copy">Copy</button>
+            </div>
+          </dialog>
+          {% endif %}
+        </div>
+      </div>
+    </li>
+    <br>
+
+    {% endfor %}
+
+  </ol>
+</div>
+
+<script>
+  document.querySelectorAll('[data-citation-dialog]').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      var dialog = document.getElementById(link.dataset.citationDialog);
+      if (!dialog || typeof dialog.showModal !== 'function') return;
+      event.preventDefault();
+      dialog.showModal();
+    });
+  });
+
+  document.querySelectorAll('.citation-dialog').forEach(function (dialog) {
+    var status = dialog.querySelector('.citation-copy-status');
+
+    dialog.querySelector('.citation-close').addEventListener('click', function () {
+      dialog.close();
+    });
+
+    dialog.querySelector('.citation-copy').addEventListener('click', async function () {
+      try {
+        await navigator.clipboard.writeText(dialog.querySelector('pre').textContent.trim());
+        status.textContent = 'Copied!';
+      } catch (error) {
+        status.textContent = 'Copy failed; please select the citation text above.';
+      }
+    });
+
+    dialog.addEventListener('close', function () {
+      status.textContent = '';
+    });
+  });
+</script>

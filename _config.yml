@@ -1,0 +1,31 @@
+title: GAO Tianhong (高天鸿)
+position: Ph.D. Student
+affiliation: Peking University
+affiliation_link: https://sai.pku.edu.cn/
+email: thgao25@stu.pku.edu.cn
+github_link: https://github.com/guesss2022
+avatar: /assets/img/portrait-original.jpg
+
+lang: en
+description: Academic homepage of GAO Tianhong (高天鸿), a Ph.D. student at Peking University working on computer graphics, physical simulation, and robotics.
+keywords: GAO Tianhong, Gao Tianhong, 高天鸿, Tianhong Gao, Peking University, computer graphics, physical simulation, robotics
+canonical: https://guesss2022.github.io/
+
+font: "Sans Serif"
+enable_footnote: true
+auto_dark_mode: true
+round_avatar: false
+enable_publication_thumbnails: false
+enable_notes_thumbnails: false
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+
+exclude:
+  - .bundle
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - vendor
