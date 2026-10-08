@@ -1,5 +1,6 @@
 main:
   - title: "JODA: Composable Joint Dynamics for Articulated Objects"
+    image: /assets/img/publications/joda-overview.png
     authors: "<strong>Tianhong Gao</strong><sup>*</sup>, Cheng Yu<sup>*</sup>, Yinghao Xu, Mengyu Chu<sup>†</sup>"
     journal: "NeurIPS 2026"
     link: https://arxiv.org/abs/2605.09954v1
@@ -7,6 +8,7 @@ main:
     code_note: "Recent updates, demos, and code coming soon!"
 
   - title: "Fast Multi-Body Coupling for Underwater Interactions"
+    image: /assets/img/publications/fast-multi-body-coupling.png
     authors: "<strong>Tianhong Gao</strong>, Xuwen Chen, Xingqiao Li, Wei Li, Baoquan Chen, Zherong Pan, Kui Wu, Mengyu Chu<sup>†</sup>"
     journal: "Pacific Graphics 2025"
     link: /fast-multi-body-coupling.html

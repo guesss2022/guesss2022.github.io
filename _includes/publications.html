@@ -13,7 +13,7 @@
         {% if site.enable_publication_thumbnails %}
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
           {% if pub.image %}
-          <img src="{{ pub.image }}" class="teaser img-fluid z-depth-1">
+          <img src="{{ pub.image | relative_url }}" alt="Teaser image for {{ pub.title | escape }}" loading="lazy" class="teaser img-fluid z-depth-1">
           {% if pub.journal_short %}
           <abbr class="badge">{{ pub.journal_short }}</abbr>
           {% endif %}

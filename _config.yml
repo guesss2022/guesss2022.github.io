@@ -16,7 +16,7 @@ font: "Sans Serif"
 enable_footnote: true
 auto_dark_mode: true
 round_avatar: false
-enable_publication_thumbnails: false
+enable_publication_thumbnails: true
 enable_notes_thumbnails: false
 
 markdown: kramdown
