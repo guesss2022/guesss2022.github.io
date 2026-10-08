@@ -280,7 +280,7 @@ a:hover small {
 }
 
 .wrapper {
-  width: 1080px;
+  width: min(calc(100% - 48px), 1160px);
   margin: 0 auto;
 }
 
@@ -406,11 +406,10 @@ header ul a strong {
 }
 
 main {
-  width: 640px;
+  width: calc(100% - 360px);
   float: right;
   padding-top: 4.0em;
   padding-bottom: 50px;
-  padding-right: 100px;
 }
 
 small {
