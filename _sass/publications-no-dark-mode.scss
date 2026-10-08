@@ -42,6 +42,24 @@ screen and (min-width: 480px) {
   margin-top: 0;
 }
 
+.publications .pub-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.publications .pub-row .abbr {
+  flex: 0 0 200px;
+  position: relative;
+}
+
+.publications .pub-row .col-sm-9 {
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto;
+  position: relative;
+}
+
 .publications h1 {
   color: var(--global-theme-color);
   font-size: 2rem;
@@ -78,8 +96,8 @@ screen and (min-width: 480px) {
 }
 
 .publications ol.bibliography li .abbr {
-  height: 8rem;
-  margin-bottom: 0.5rem;
+  height: 120px;
+  margin: 0;
 }
 
 .publications ol.bibliography li .abbr abbr {
@@ -182,11 +200,19 @@ screen and (min-width: 480px) {
   box-shadow: 3px 3px 6px #888;
   height: 120px;
   width: 200px;
-  margin-top: 5px;
-  margin-left: 5px;
-  margin-bottom: 5px;
+  display: block;
   object-fit: contain;
   background: #fff;
+}
+
+@media screen and (max-width: 720px) {
+  .publications .pub-row {
+    display: block;
+  }
+
+  .publications .pub-row .abbr {
+    margin-bottom: 12px;
+  }
 }
 
 // notes
