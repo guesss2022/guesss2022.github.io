@@ -32,6 +32,7 @@
   {% else %}
   <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
   {% endif %}
+  <link rel="stylesheet" href="{{ '/assets/css/navigation.css' | relative_url }}">
   {% if site.round_avatar %}
   <style>
     .image.avatar img {
@@ -48,6 +49,20 @@
 </head>
 
 <body>
+  <nav class="site-nav" aria-label="Site navigation">
+    <div class="site-nav-inner">
+      <a class="site-nav-brand" href="/">GAO Tianhong</a>
+      <div class="site-nav-links">
+        <a href="/#about-me">About</a>
+        <a href="/#research-interests">Research</a>
+        <a href="/#news">News</a>
+        <a href="/#publications">Publications</a>
+        <a href="/#research-and-internship-experience">Experience</a>
+        <a href="/#education">Education</a>
+        <a href="/#selected-honors">Honors</a>
+      </div>
+    </div>
+  </nav>
   <div class="wrapper">
     <header>
 
@@ -158,6 +173,28 @@
     ga('send', 'pageview');
   </script>
   {% endif %}
+  <script>
+    (function () {
+      var returnKey = 'fast-multi-body-coupling-return-scroll';
+      var paperLink = document.querySelector('a[href="/fast-multi-body-coupling.html"]');
+      if (paperLink) {
+        paperLink.addEventListener('click', function () {
+          try { sessionStorage.setItem(returnKey, String(window.scrollY)); } catch (error) { /* Storage may be unavailable. */ }
+        });
+      }
+
+      window.addEventListener('pageshow', function () {
+        try {
+          if (new URL(document.referrer).pathname !== '/fast-multi-body-coupling.html') return;
+          var storedPosition = sessionStorage.getItem(returnKey);
+          if (storedPosition === null) return;
+          var position = Number(storedPosition);
+          sessionStorage.removeItem(returnKey);
+          if (Number.isFinite(position)) requestAnimationFrame(function () { window.scrollTo(0, position); });
+        } catch (error) { /* The browser can still restore scroll position itself. */ }
+      });
+    }());
+  </script>
 </body>
 
 </html>
