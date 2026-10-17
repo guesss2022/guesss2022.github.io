@@ -40,4 +40,4 @@ I am currently seeking internship and collaboration opportunities to advance res
 
 - Outstanding Graduate, Tsinghua University (2025)
 - National Scholarship (2022)
-- First Prize, Chinese Physics Olympiad Finals (2020)
+- First Prize (National Finals), 37th Chinese Physics Olympiad (2020)
