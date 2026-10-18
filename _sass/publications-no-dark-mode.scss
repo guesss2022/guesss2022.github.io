@@ -128,12 +128,15 @@ screen and (min-width: 480px) {
 }
 
 .publications ol.bibliography li .author a {
-  border-bottom: 1px var(--global-theme-color);
+  color: inherit;
+  border-bottom: 1px solid transparent;
+  text-decoration: none;
 }
 
-.publications ol.bibliography li .author a:hover {
-  border-bottom-style: solid;
-  text-decoration: none;
+.publications ol.bibliography li .author a:hover,
+.publications ol.bibliography li .author a:focus-visible {
+  color: inherit;
+  border-bottom-color: currentColor;
 }
 
 .publications ol.bibliography li .author>em {
