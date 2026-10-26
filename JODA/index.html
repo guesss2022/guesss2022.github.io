@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>JODA: Composable Joint Dynamics for Articulated Objects</title>
+  <meta name="description" content="JODA generates interpretable, editable, and optimizable joint dynamics for articulated objects.">
+  <link rel="canonical" href="https://guesss2022.github.io/JODA/">
+  <meta name="citation_title" content="JODA: Composable Joint Dynamics for Articulated Objects">
+  <meta name="citation_author" content="Gao, Tianhong">
+  <meta name="citation_author" content="Yu, Cheng">
+  <meta name="citation_author" content="Xu, Yinghao">
+  <meta name="citation_author" content="Chu, Mengyu">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_arxiv_id" content="2605.09954">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="joda.css">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered"><div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">JODA: Composable Joint Dynamics for Articulated Objects</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><a href="/">Tianhong Gao</a><sup>1,*</sup>,</span>
+              <span class="author-block"><a href="https://ycpku.github.io/">Cheng Yu</a><sup>1,*</sup>,</span>
+              <span class="author-block"><a href="https://justimyhxu.github.io/">Yinghao Xu</a><sup>2</sup>,</span>
+              <span class="author-block"><a href="https://rachelcmy.github.io/">Mengyu Chu</a><sup>1,†</sup></span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Peking University,</span>
+              <span class="author-block"><sup>2</sup>Ant Group, Robbyant</span>
+            </div>
+            <div class="author-notes"><sup>*</sup> Equal contribution &nbsp;&nbsp; <sup>†</sup> Corresponding author</div>
+            <div class="publication-links">
+              <span class="link-block"><a href="https://arxiv.org/abs/2605.09954" class="external-link button is-normal is-rounded is-dark"><span>Paper</span></a></span>
+              <span class="link-block"><a href="https://github.com/guesss2022/JODA" class="external-link button is-normal is-rounded is-dark"><span>Code</span></a></span>
+              <span class="link-block"><a href="#video" class="external-link button is-normal is-rounded is-dark"><span>Video</span></a></span>
+              <span class="link-block"><a href="#bibtex" class="external-link button is-normal is-rounded is-dark"><span>BibTeX</span></a></span>
+            </div>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser"><div class="container is-max-desktop"><div class="hero-body">
+      <div class="media-frame pipeline-frame"><img src="/assets/img/publications/joda-overview.png" alt="JODA pipeline"></div>
+      <h2 class="subtitle has-text-centered">JODA turns latent mechanical behavior into an interpretable three-channel dynamics field that can be generated, edited, simulated, and optimized.</h2>
+    </div></div></section>
+
+    <section class="hero is-light is-small abstract-section"><div class="container is-max-desktop"><div class="columns is-centered has-text-justified"><div class="column is-four-fifths">
+      <br><h2 class="title is-3 has-text-centered">Abstract</h2>
+      <div class="content has-text-justified"><p>Articulated objects used in simulation and embodied AI are typically specified by geometry and kinematic structure, but lack the fine-grained dynamical effects that govern realistic mechanical behavior, such as frictional holding, detents, soft closing, and snap latching. Existing approaches either ignore the detailed structure of dynamics entirely, or use simple models with limited expressiveness.</p>
+      <p>We introduce JODA, a framework for generating joint-level dynamics as a structured three-channel field over the joint degree of freedom, capturing conservative forces, dry friction, and damping. Instantiated using shape-constrained piecewise cubic interpolation (PCHIP), this formulation defines a compact, expressive, and interpretable function space that supports both direct editing and optimization-based refinement. Building on this representation, we develop an agentic generation pipeline for inferring and refining joint dynamics from multimodal inputs. Given visual observations and joint context, the pipeline uses a vision-language model to propose structured dynamical primitives, composes them into the three-channel dynamics field, and iteratively revises the proposals through diagnostic feedback.</p>
+      <p>We demonstrate that JODA enables plausible and controllable modeling of diverse joint behaviors, providing a unified interface for inference, editing, and optimization.</p><br></div>
+    </div></div></div></section>
+
+    <section class="hero teaser video-section" id="video"><div class="container is-max-desktop"><div class="hero-body">
+      <h2 class="title is-3 has-text-centered">Supplementary Video</h2>
+      <div class="overview-player media-frame"><video controls playsinline preload="metadata" poster="assets/video-poster.jpg"><source src="assets/joda-supplementary.mp4" type="video/mp4"></video></div>
+    </div></div></section>
+
+    <section class="hero is-light is-small bibtex-section" id="bibtex"><div class="container is-max-desktop"><div class="hero-body"><h2 class="title is-3 has-text-centered">BibTeX</h2><pre><code>@misc{gao2026jodacomposablejointdynamics,
+  title         = {JODA: Composable Joint Dynamics for Articulated Objects},
+  author        = {Tianhong Gao and Cheng Yu and Yinghao Xu and Mengyu Chu},
+  year          = {2026},
+  eprint        = {2605.09954},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2605.09954}
+}</code></pre></div></div></section>
+  </main>
+  <footer class="footer"><div class="content has-text-centered">Built from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a>, adapted from Nerfies.</div></footer>
+</body>
+</html>
