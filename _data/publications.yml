@@ -1,9 +1,10 @@
 main:
   - title: "JODA: Composable Joint Dynamics for Articulated Objects"
     image: /assets/img/publications/joda-overview.png
-    authors: "<strong>Tianhong Gao</strong><sup>*</sup>, Cheng Yu<sup>*</sup>, <a href='https://justimyhxu.github.io/'>Yinghao Xu</a>, <a href='https://rachelcmy.github.io/'>Mengyu Chu</a><sup>†</sup>"
+    authors: "<strong>Tianhong Gao</strong><sup>*</sup>, <a href='https://ycpku.github.io/'>Cheng Yu</a><sup>*</sup>, <a href='https://justimyhxu.github.io/'>Yinghao Xu</a>, <a href='https://rachelcmy.github.io/'>Mengyu Chu</a><sup>†</sup>"
     journal: "NeurIPS 2026"
     link: https://arxiv.org/abs/2605.09954v1
+    project: /JODA/
     arxiv: https://arxiv.org/abs/2605.09954v1
     code_note: "Recent updates, demos, and code coming soon!"
 

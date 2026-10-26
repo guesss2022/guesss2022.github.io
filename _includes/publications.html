@@ -40,6 +40,10 @@
             {% endif %}
           </div>
           <div class="links">
+            {% if pub.project %}
+            <a href="{{ pub.project | relative_url }}" class="btn btn-sm z-depth-0" role="button"
+              style="font-size:12px;">Project</a>
+            {% endif %}
             {% if pub.pdf %}
             <a href="{{ pub.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
               style="font-size:12px;">PDF</a>
