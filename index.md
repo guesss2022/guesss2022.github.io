@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at the School of Artificial Intelligence, Peking University, advised by [Assistant Professor Mengyu Chu](https://rachelcmy.github.io/). I received my B.Eng. in Electronic Engineering from Tsinghua University in 2025.
+I am a Ph.D. student at the School of Intelligence Science and Technology, Peking University, advised by [Assistant Professor Mengyu Chu](https://rachelcmy.github.io/). I received my B.Eng. in Electronic Engineering from Tsinghua University in 2025.
 
 I am currently seeking internship and collaboration opportunities to advance research on sim-ready assets, synthetic data, and dexterous manipulation.
 
@@ -33,7 +33,7 @@ I am currently seeking internship and collaboration opportunities to advance res
 
 ## Education
 
-- **Peking University**, Ph.D. student, School of Artificial Intelligence, September 2025–present. Expected graduation: June 2030.
+- **Peking University**, Ph.D. student, School of Intelligence Science and Technology, September 2025–present. Expected graduation: June 2030.
 - **Tsinghua University**, B.Eng. in Electronic Engineering, September 2021–June 2025.
 
 ## Selected Honors
